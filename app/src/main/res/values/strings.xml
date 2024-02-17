@@ -2,6 +2,6 @@
     <string name="app_name">DuckApp</string>
     <string name="description">description</string>
     <string name="DuckApp">Ducks</string>
-    <string name="next">next</string>
+    <string name="next">Show me a duck!</string>
     <string name="send">send</string>
 </resources>
