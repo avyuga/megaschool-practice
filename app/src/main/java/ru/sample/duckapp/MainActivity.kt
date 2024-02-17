@@ -40,12 +40,14 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful){
                     val duck = response.body() as Duck
                     url = duck.url
-                    Log.v("URL", url)
-                    Picasso.get().load(url).into(ivBasicImage)
+                    Picasso.get().load(url).resize(400, 0).centerCrop().into(ivBasicImage)
+
                 }
 
             }
             override fun onFailure(call: Call<Duck>, t: Throwable){
+                Picasso.get().load(R.drawable.sad_duck).resize(400, 0).centerCrop().into(ivBasicImage)
+
             }
         })
     }
